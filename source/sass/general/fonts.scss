@@ -1,0 +1,39 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Montserrat";
+  src: url("../fonts/montserratregular.woff2") format("woff2"),
+    url("../fonts/montserratregular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Montserrat";
+  src: url("../fonts/montserratmedium.woff2") format("woff2"),
+    url("../fonts/montserratmedium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "Montserrat";
+  src: url("../fonts/montserratsemibold.woff2") format("woff2"),
+    url("../fonts/montserratsemibold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Montserrat";
+  src: url("../fonts/montserratbold.woff2") format("woff2"),
+    url("../fonts/montserratbold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Poppins";
+  src: url("../fonts/poppinsmedium.woff2") format("woff2"),
+    url("../fonts/poppinsmedium.woff") format("woff");
+  font-display: swap;
+}
