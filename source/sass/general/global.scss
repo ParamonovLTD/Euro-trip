@@ -16,8 +16,7 @@ body {
   margin: 0;
   padding: 0;
 
-  @include font(16px, 28px, $font-montserrat);
-  font-weight: 400;
+  @include font(400, 16px, 28px, $font-montserrat);
 
   background-color: #ffffff;
 }
