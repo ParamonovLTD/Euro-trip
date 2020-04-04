@@ -1,10 +1,11 @@
-@mixin font($font-size, $line-height, $font) {
+@mixin font($font-weight, $font-size, $line-height, $font) {
+  font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;
   font-family: $font;
 }
 
-@mixin size($width, $height) {
+@mixin size($width, $height: auto) {
   width: $width;
   height: $height;
 }
@@ -21,11 +22,24 @@
   list-style: none;
 }
 
+@mixin title {
+  @include clear-block;
+  @include font(600, 55px, 80px, $font-montserrat);
+  color: $dark;
+}
+
+@mixin button {
+  display: block;
+
+  @include font(700, 12px, 15px, $font-montserrat);
+  text-align: center;
+
+  background-color: $main-accent;
+}
+
 @mixin container {
   max-width: 1300px;
   margin: 0 auto;
-  padding-right: 40px;
-  padding-left: 40px;
 
   // @media #{$tablet-width} {
   //   padding-right: 30px;
