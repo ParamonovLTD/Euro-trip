@@ -32,7 +32,7 @@
         <div class="introduction__info">
           <h1>Путешествие по Европе</h1>
           <p>В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-          <a class="introduction__link" href="#">Смотреть тур</a>
+          <a class="introduction__link button" href="#">Смотреть тур</a>
         </div>
       </div>
     </section>
@@ -137,186 +137,217 @@
     </section>
 
     <section class="description">
+      <h2 class="visually-hidden">Описание тура</h2>
       <div class="description__container">
         <ul class="description__tabs tabs">
-          <li class="tabs__item"><button class="tabs__button" type="button">Греция</button></li>
+          <li class="tabs__item"><button class="tabs__button tabs__button--current" type="button">Греция</button></li>
           <li class="tabs__item"><button class="tabs__button" type="button">Албания</button></li>
           <li class="tabs__item"><button class="tabs__button" type="button">Македония</button></li>
           <li class="tabs__item"><button class="tabs__button" type="button">Черногория</button></li>
           <li class="tabs__item"><button class="tabs__button" type="button">Хорватия</button></li>
         </ul>
-        <article class="description__tour-info tour-info">
-          <h2>Греция</h2>
-          <p>На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал.
-            Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего
-            путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту
-            600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
-          </p>
-          <button class="tour-info__button" type="button">Купить тур сейчас</button>
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/greece-big-mobile@1x.webp 1x, img/greece-big-mobile@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 1023px)" srcset="img/greece-big-tablet@1x.webp 1x, img/greece-big-tablet@2x.webp 2x" type="image/webp">
-            <source srcset="img/greece-big-desktop@1x.webp 1x, img/greece-big-desktop@2x.webp 2x" type="image/webp">
+        <article class="description__tour-info tour-info tour-info--current">
+          <div class="tour-info__text-wrapper">
+            <h2>Греция</h2>
+            <p>На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал.
+              Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего
+              путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600
+              метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
+            </p>
+            <button class="tour-info__button button" type="button">Купить тур сейчас</button>
+          </div>
+          <div class="tour-info__image-wrapper">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/greece-big-mobile@1x.webp 1x, img/greece-big-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/greece-big-tablet@1x.webp 1x, img/greece-big-tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/greece-big-desktop@1x.webp 1x, img/greece-big-desktop@2x.webp 2x" type="image/webp">
 
-            <!-- 1x: 320px; 2x: 640px -->
-            <source media="(max-width: 767px)" srcset="img/greece-big-mobile@1x.jpg 1x, img/greece-big-mobile@2x.jpg 2x">
-            <!-- 1x: 768px; 2x: 1536px -->
-            <source media="(max-width: 1023px)" srcset="img/greece-big-tablet@1x.jpg 1x, img/greece-big-tablet@2x.jpg 2x">
-            <!-- 1x: 430px; 2x: 860px -->
-            <img src="img/greece-big-desktop@1x.jpg" srcset="img/greece-big-desktop@2x.jpg 2x" width="430" height="596" alt="Дом на скале на фоне гор">
-          </picture>
-          <article class="tour-info__review review">
-            <h3>Отзывы</h3>
-            <blockquote class="review__text">
-              <p>Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь
-                потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
-              </p>
-              <picture>
-                <source srcset="img/greece-review_author@1x.webp 1x, img/greece-review_author@2x.webp 2x" type="image/webp">
+              <!-- 1x: 320px; 2x: 640px -->
+              <source media="(max-width: 767px)" srcset="img/greece-big-mobile@1x.jpg 1x, img/greece-big-mobile@2x.jpg 2x">
+              <!-- 1x: 768px; 2x: 1536px -->
+              <source media="(max-width: 1023px)" srcset="img/greece-big-tablet@1x.jpg 1x, img/greece-big-tablet@2x.jpg 2x">
+              <!-- 1x: 430px; 2x: 860px -->
+              <img src="img/greece-big-desktop@1x.jpg" srcset="img/greece-big-desktop@2x.jpg 2x" width="430" height="596" alt="Дом на скале на фоне гор">
+            </picture>
+            <article class="tour-info__review review">
+              <h3>Отзывы</h3>
+              <blockquote class="review__text">
+                <p>Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь
+                  потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
+                </p>
+                <div class="review__author">
+                  <picture>
+                    <source srcset="img/greece-review_author@1x.webp 1x, img/greece-review_author@2x.webp 2x" type="image/webp">
 
-                <!-- 1x: 38px; 2x: 75px -->
-                <img src="img/greece-review_author@1x.png" srcset="img/greece-review_author@2x.png 2x" width="38" height="38" alt="Девушка азиатской внешности в черном платье">
-              </picture>
-              <cite class="review__author">Влада Голицина</cite>
-            </blockquote>
-          </article>
+                    <!-- 1x: 38px; 2x: 75px -->
+                    <img src="img/greece-review_author@1x.png" srcset="img/greece-review_author@2x.png 2x" width="38" height="38" alt="Девушка азиатской внешности в черном платье">
+                  </picture>
+                  <cite class="review__author-name">Влада Голицина</cite>
+                </div>
+              </blockquote>
+            </article>
+          </div>
         </article>
         <article class="description__tour-info tour-info">
-          <h2>Албания</h2>
-          <p>В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале
-            кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако,
-            присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
-          </p>
-          <button class="tour-info__button">Купить тур сейчас</button>
-          <picture>
-            <!-- <source media="(max-width: 767px)" srcset="img/albania-big-mobile@1x.webp 1x, img/albania-big-mobile@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 1023px)" srcset="img/albania-big-tablet@1x.webp 1x, img/albania-big-tablet@2x.webp 2x" type="image/webp">
-            <source srcset="img/albania-big-desktop@1x.webp 1x, img/albania-big-desktop@2x.webp 2x" type="image/webp"> -->
+          <div class="tour-info__text-wrapper">
+            <h2>Албания</h2>
+            <p>В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале
+              кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако,
+              присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
+            </p>
+            <button class="tour-info__button button">Купить тур сейчас</button>
+          </div>
+          <div class="tour-info__image-wrapper">
+            <picture>
+              <!-- <source media="(max-width: 767px)" srcset="img/albania-big-mobile@1x.webp 1x, img/albania-big-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/albania-big-tablet@1x.webp 1x, img/albania-big-tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/albania-big-desktop@1x.webp 1x, img/albania-big-desktop@2x.webp 2x" type="image/webp"> -->
 
-            <!-- 1x: 320px; 2x: 640px -->
-            <source media="(max-width: 767px)" srcset="img/albania-big-mobile@1x.jpg 1x, img/albania-big-mobile@2x.jpg 2x">
-            <!-- 1x: 768px; 2x: 1536px -->
-            <source media="(max-width: 1023px)" srcset="img/albania-big-tablet@1x.jpg 1x, img/albania-big-tablet@2x.jpg 2x">
-            <!-- 1x: 430px; 2x: 860px -->
-            <img src="img/albania-big-desktop@1x.jpg" srcset="img/albania-big-desktop@2x.jpg 2x" width="430" height="596" alt="Вид сверху на набережную и море">
-          </picture>
-          <article class="tour-info__review review">
-            <h3>Отзывы</h3>
-            <blockquote class="review__text">
-              <p>Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру,
-                чтобы тоже смогла вкусить все красоты природы :)
-              </p>
-              <picture>
-                <source srcset="img/albania-review_author@1x.webp 1x, img/albania-review_author@2x.webp 2x" type="image/webp">
+              <!-- 1x: 320px; 2x: 640px -->
+              <source media="(max-width: 767px)" srcset="img/albania-big-mobile@1x.jpg 1x, img/albania-big-mobile@2x.jpg 2x">
+              <!-- 1x: 768px; 2x: 1536px -->
+              <source media="(max-width: 1023px)" srcset="img/albania-big-tablet@1x.jpg 1x, img/albania-big-tablet@2x.jpg 2x">
+              <!-- 1x: 430px; 2x: 860px -->
+              <img src="img/albania-big-desktop@1x.jpg" srcset="img/albania-big-desktop@2x.jpg 2x" width="430" height="596" alt="Вид сверху на набережную и море">
+            </picture>
+            <article class="tour-info__review review">
+              <h3>Отзывы</h3>
+              <blockquote class="review__text">
+                <p>Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру,
+                  чтобы тоже смогла вкусить все красоты природы :)
+                </p>
+                <div class="review__author">
+                  <picture>
+                    <source srcset="img/albania-review_author@1x.webp 1x, img/albania-review_author@2x.webp 2x" type="image/webp">
 
-                <!-- 1x: 38px; 2x: 75px -->
-                <img src="img/albania-review_author@1x.png" srcset="img/albania-review_author@2x.png 2x" width="38" height="38" alt="Девушка в светлом платье и шляпе">
-              </picture>
-              <cite class="review__author">Маришка</cite>
-            </blockquote>
-          </article>
+                    <!-- 1x: 38px; 2x: 75px -->
+                    <img src="img/albania-review_author@1x.png" srcset="img/albania-review_author@2x.png 2x" width="38" height="38" alt="Девушка в светлом платье и шляпе">
+                  </picture>
+                  <cite class="review__author-name">Маришка</cite>
+                </div>
+              </blockquote>
+            </article>
+          </div>
         </article>
         <article class="description__tour-info tour-info">
-          <h2>Македония</h2>
-          <p>В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой
-            местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен
-            где находится  археологический памятник Кокино в длину около 100 метров.
-          </p>
-          <button class="tour-info__button">Купить тур сейчас</button>
-          <picture>
-            <!-- <source media="(max-width: 767px)" srcset="img/makedonia-big-mobile@1x.webp 1x, img/makedonia-big-mobile@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 1023px)" srcset="img/makedonia-big-tablet@1x.webp 1x, img/makedonia-big-tablet@2x.webp 2x" type="image/webp">
-            <source srcset="img/makedonia-big-desktop@1x.webp 1x, img/makedonia-big-desktop@2x.webp 2x" type="image/webp"> -->
+          <div class="tour-info__text-wrapper">
+            <h2>Македония</h2>
+            <p>В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой
+              местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен
+              где находится  археологический памятник Кокино в длину около 100 метров.
+            </p>
+            <button class="tour-info__button button">Купить тур сейчас</button>
+          </div>
+          <div class="tour-info__image-wrapper">
+            <picture>
+              <!-- <source media="(max-width: 767px)" srcset="img/makedonia-big-mobile@1x.webp 1x, img/makedonia-big-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/makedonia-big-tablet@1x.webp 1x, img/makedonia-big-tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/makedonia-big-desktop@1x.webp 1x, img/makedonia-big-desktop@2x.webp 2x" type="image/webp"> -->
 
-            <!-- 1x: 320px; 2x: 640px -->
-            <source media="(max-width: 767px)" srcset="img/makedonia-big-mobile@1x.jpg 1x, img/makedonia-big-mobile@2x.jpg 2x">
-            <!-- 1x: 768px; 2x: 1536px -->
-            <source media="(max-width: 1023px)" srcset="img/makedonia-big-tablet@1x.jpg 1x, img/makedonia-big-tablet@2x.jpg 2x">
-            <!-- 1x: 430px; 2x: 860px -->
-            <img src="img/makedonia-big-desktop@1x.jpg" srcset="img/makedonia-big-desktop@2x.jpg 2x" width="430" height="596" alt="Церковь на фоне океана">
-          </picture>
-          <article class="tour-info__review review">
-            <h3>Отзывы</h3>
-            <blockquote class="review__text">
-              <p>Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так
-                как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.
-              </p>
-              <picture>
-                <source srcset="img/makedonia-review_author@1x.webp 1x, img/makedonia-review_author@2x.webp 2x" type="image/webp">
+              <!-- 1x: 320px; 2x: 640px -->
+              <source media="(max-width: 767px)" srcset="img/makedonia-big-mobile@1x.jpg 1x, img/makedonia-big-mobile@2x.jpg 2x">
+              <!-- 1x: 768px; 2x: 1536px -->
+              <source media="(max-width: 1023px)" srcset="img/makedonia-big-tablet@1x.jpg 1x, img/makedonia-big-tablet@2x.jpg 2x">
+              <!-- 1x: 430px; 2x: 860px -->
+              <img src="img/makedonia-big-desktop@1x.jpg" srcset="img/makedonia-big-desktop@2x.jpg 2x" width="430" height="596" alt="Церковь на фоне океана">
+            </picture>
+            <article class="tour-info__review review">
+              <h3>Отзывы</h3>
+              <blockquote class="review__text">
+                <p>Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так
+                  как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.
+                </p>
+                <div class="review__author">
+                  <picture>
+                    <source srcset="img/makedonia-review_author@1x.webp 1x, img/makedonia-review_author@2x.webp 2x" type="image/webp">
 
-                <!-- 1x: 38px; 2x: 75px -->
-                <img src="img/makedonia-review_author@1x.png" srcset="img/makedonia-review_author@2x.png 2x" width="38" height="38" alt="Парень в полосатой футболке и темно-бирюзовой рубашке">
-              </picture>
-              <cite class="review__author">Михаил Кузьмин</cite>
-            </blockquote>
-          </article>
+                    <!-- 1x: 38px; 2x: 75px -->
+                    <img src="img/makedonia-review_author@1x.png" srcset="img/makedonia-review_author@2x.png 2x" width="38" height="38" alt="Парень в полосатой футболке и темно-бирюзовой рубашке">
+                  </picture>
+                  <cite class="review__author-name">Михаил Кузьмин</cite>
+                </div>
+              </blockquote>
+            </article>
+          </div>
         </article>
         <article class="description__tour-info tour-info">
-          <h2>Черногория</h2>
-          <p>Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов
-            доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
-          </p>
-          <button class="tour-info__button">Купить тур сейчас</button>
-          <picture>
-            <!-- <source media="(max-width: 767px)" srcset="img/montenegro-big-mobile@1x.webp 1x, img/montenegro-big-mobile@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 1023px)" srcset="img/montenegro-big-tablet@1x.webp 1x, img/montenegro-big-tablet@2x.webp 2x" type="image/webp">
-            <source srcset="img/montenegro-big-desktop@1x.webp 1x, img/montenegro-big-desktop@2x.webp 2x" type="image/webp"> -->
+          <div class="tour-info__text-wrapper">
+            <h2>Черногория</h2>
+            <p>Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов
+              доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
+            </p>
+            <button class="tour-info__button button">Купить тур сейчас</button>
+          </div>
+          <div class="tour-info__image-wrapper">
+            <picture>
+              <!-- <source media="(max-width: 767px)" srcset="img/montenegro-big-mobile@1x.webp 1x, img/montenegro-big-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/montenegro-big-tablet@1x.webp 1x, img/montenegro-big-tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/montenegro-big-desktop@1x.webp 1x, img/montenegro-big-desktop@2x.webp 2x" type="image/webp"> -->
 
-            <!-- 1x: 320px; 2x: 640px -->
-            <source media="(max-width: 767px)" srcset="img/montenegro-big-mobile@1x.jpg 1x, img/montenegro-big-mobile@2x.jpg 2x">
-            <!-- 1x: 768px; 2x: 1536px -->
-            <source media="(max-width: 1023px)" srcset="img/montenegro-big-tablet@1x.jpg 1x, img/montenegro-big-tablet@2x.jpg 2x">
-            <!-- 1x: 430px; 2x: 860px -->
-            <img src="img/montenegro-big-desktop@1x.jpg" srcset="img/montenegro-big-desktop@2x.jpg 2x" width="430" height="596" alt="Река посреди лиственного леса">
-          </picture>
-          <article class="tour-info__review review">
-            <h3>Отзывы</h3>
-            <blockquote class="review__text">
-              <p>Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
-              <picture>
-                <source srcset="img/montenegro-review_author@1x.webp 1x, img/montenegro-review_author@2x.webp 2x" type="image/webp">
+              <!-- 1x: 320px; 2x: 640px -->
+              <source media="(max-width: 767px)" srcset="img/montenegro-big-mobile@1x.jpg 1x, img/montenegro-big-mobile@2x.jpg 2x">
+              <!-- 1x: 768px; 2x: 1536px -->
+              <source media="(max-width: 1023px)" srcset="img/montenegro-big-tablet@1x.jpg 1x, img/montenegro-big-tablet@2x.jpg 2x">
+              <!-- 1x: 430px; 2x: 860px -->
+              <img src="img/montenegro-big-desktop@1x.jpg" srcset="img/montenegro-big-desktop@2x.jpg 2x" width="430" height="596" alt="Река посреди лиственного леса">
+            </picture>
+            <article class="tour-info__review review">
+              <h3>Отзывы</h3>
+              <blockquote class="review__text">
+                <p>Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
+                <div class="review__author">
+                  <picture>
+                    <source srcset="img/montenegro-review_author@1x.webp 1x, img/montenegro-review_author@2x.webp 2x" type="image/webp">
 
-                <!-- 1x: 38px; 2x: 75px -->
-                <img src="img/montenegro-review_author@1x.png" srcset="img/montenegro-review_author@2x.png 2x" width="38" height="38" alt="Девушка в джинсах, сидящая на камне на фоне моря">
-              </picture>
-              <cite class="review__author">Анастасия Мей</cite>
-            </blockquote>
-          </article>
+                    <!-- 1x: 38px; 2x: 75px -->
+                    <img src="img/montenegro-review_author@1x.png" srcset="img/montenegro-review_author@2x.png 2x" width="38" height="38" alt="Девушка в джинсах, сидящая на камне на фоне моря">
+                  </picture>
+                  <cite class="review__author-name">Анастасия Мей</cite>
+                </div>
+              </blockquote>
+            </article>
+          </div>
         </article>
         <article class="description__tour-info tour-info">
-          <h2>Хорватия</h2>
-          <p>В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую
-            глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и
-            сталагмитами —  формировавшимися тысячи и тысячи лет.
-          </p>
-          <button class="tour-info__button">Купить тур сейчас</button>
-          <picture>
-            <!-- <source media="(max-width: 767px)" srcset="img/croatia-big-mobile@1x.webp 1x, img/croatia-big-mobile@2x.webp 2x" type="image/webp">
-            <source media="(max-width: 1023px)" srcset="img/croatia-big-tablet@1x.webp 1x, img/croatia-big-tablet@2x.webp 2x" type="image/webp">
-            <source srcset="img/croatia-big-desktop@1x.webp 1x, img/croatia-big-desktop@2x.webp 2x" type="image/webp"> -->
+          <div class="tour-info__text-wrapper">
+            <h2>Хорватия</h2>
+            <p>В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую
+              глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и
+              сталагмитами —  формировавшимися тысячи и тысячи лет.
+            </p>
+            <button class="tour-info__button button">Купить тур сейчас</button>
+          </div>
+          <div class="tour-info__image-wrapper">
+            <picture>
+              <!-- <source media="(max-width: 767px)" srcset="img/croatia-big-mobile@1x.webp 1x, img/croatia-big-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/croatia-big-tablet@1x.webp 1x, img/croatia-big-tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/croatia-big-desktop@1x.webp 1x, img/croatia-big-desktop@2x.webp 2x" type="image/webp"> -->
 
-            <!-- 1x: 320px; 2x: 640px -->
-            <source media="(max-width: 767px)" srcset="img/croatia-big-mobile@1x.jpg 1x, img/croatia-big-mobile@2x.jpg 2x">
-            <!-- 1x: 768px; 2x: 1536px -->
-            <source media="(max-width: 1023px)" srcset="img/croatia-big-tablet@1x.jpg 1x, img/croatia-big-tablet@2x.jpg 2x">
-            <!-- 1x: 430px; 2x: 860px -->
-            <img src="img/croatia-big-desktop@1x.jpg" srcset="img/croatia-big-desktop@2x.jpg 2x" width="430" height="596" alt="Подземная вода и сталактиты">
-          </picture>
-          <article class="tour-info__review review">
-            <h3>Отзывы</h3>
-            <blockquote class="review__text">
-              <p>Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось
-                тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)
-              </p>
-              <picture>
-                <source srcset="img/croatia-review_author@1x.webp 1x, img/croatia-review_author@2x.webp 2x" type="image/webp">
+              <!-- 1x: 320px; 2x: 640px -->
+              <source media="(max-width: 767px)" srcset="img/croatia-big-mobile@1x.jpg 1x, img/croatia-big-mobile@2x.jpg 2x">
+              <!-- 1x: 768px; 2x: 1536px -->
+              <source media="(max-width: 1023px)" srcset="img/croatia-big-tablet@1x.jpg 1x, img/croatia-big-tablet@2x.jpg 2x">
+              <!-- 1x: 430px; 2x: 860px -->
+              <img src="img/croatia-big-desktop@1x.jpg" srcset="img/croatia-big-desktop@2x.jpg 2x" width="430" height="596" alt="Подземная вода и сталактиты">
+            </picture>
+            <article class="tour-info__review review">
+              <h3>Отзывы</h3>
+              <blockquote class="review__text">
+                <p>Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось
+                  тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)
+                </p>
+                <div class="review__author">
+                  <picture>
+                    <source srcset="img/croatia-review_author@1x.webp 1x, img/croatia-review_author@2x.webp 2x" type="image/webp">
 
-                <!-- 1x: 38px; 2x: 75px -->
-                <img src="img/croatia-review_author@1x.png" srcset="croatia-review_author@2x.png 2x" width="38" height="38" alt="Парень в белой футболке, коричневой рубашке и очках">
-              </picture>
-              <cite class="review__author">Владимир Мулицин</cite>
-            </blockquote>
-          </article>
+                    <!-- 1x: 38px; 2x: 75px -->
+                    <img src="img/croatia-review_author@1x.png" srcset="croatia-review_author@2x.png 2x" width="38" height="38" alt="Парень в белой футболке, коричневой рубашке и очках">
+                  </picture>
+                  <cite class="review__author-name">Владимир Мулицин</cite>
+                </div>
+              </blockquote>
+            </article>
+          </div>
         </article>
       </div>
     </section>

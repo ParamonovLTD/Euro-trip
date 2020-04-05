@@ -1,0 +1,71 @@
+.tabs {
+  position: relative;
+
+  @include clear-list;
+  display: flex;
+  justify-content: space-between;
+  max-width: 903px;
+  margin-bottom: 80px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    @include size(100%, 1px);
+
+    background-color: rgba(44, 46, 63, 0.3);
+  }
+
+  @media #{$tablet-width} {
+    margin-bottom: 20px;
+    padding-left: 37px;
+
+    overflow-x: hidden;
+
+    &::after {
+      bottom: 0;
+      left: 38px;
+    }
+  }
+
+  @media #{$mobile-width} {
+    margin-bottom: 12px;
+    padding-left: 15px;
+
+    &::after {
+      left: 15px;
+    }
+  }
+}
+
+.tabs__item {
+  @media #{$tablet-width} {
+    margin-right: 99px;
+  }
+}
+
+.tabs__button {
+  padding: 0;
+  // Падинги сделаны нарошно, чтобы кнопка была нормальная
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @include font(500, 20px, 24px, $font-montserrat);
+  color: rgba(44, 46, 63, 0.3);
+
+  background-color: #ffffff;
+  border: 0;
+
+  cursor: pointer;
+
+  &--current {
+    color: $main-accent;
+  }
+
+  @media #{$tablet-width} {
+    letter-spacing: -0.41px;
+  }
+}

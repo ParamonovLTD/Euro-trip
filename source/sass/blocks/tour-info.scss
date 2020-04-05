@@ -1,0 +1,110 @@
+.tour-info {
+  display: none;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  &--current {
+    display: flex;
+  }
+
+  @media #{$tablet-width} {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
+
+.tour-info__text-wrapper {
+  // flex-grow: 1;
+  // width: 40.18%;
+  padding-top: 10px;
+
+  @media #{$tablet-width} {
+    padding-top: 13px;
+    padding-bottom: 30px;
+  }
+
+  @media #{$mobile-width} {
+    padding-bottom: 49px;
+  }
+}
+
+.tour-info__text-wrapper h2 {
+  @include title;
+  margin-bottom: 48px;
+
+  line-height: 90px;
+  letter-spacing: -1.25px;
+
+  &::after {
+    content: "";
+
+    bottom: -17px;
+    left: 0;
+
+    @include title-underline;
+  }
+
+  @media #{$tablet-width} {
+    margin-bottom: 21px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.tour-info__text-wrapper p {
+  @include clear-block;
+  max-width: 370px;
+  margin-bottom: 48px;
+
+  @include font(400, 16px, 28px, $font-montserrat);
+  letter-spacing: -0.47px;
+  color: rgba(44, 46, 63, 0.7);
+
+  @media #{$tablet-width} {
+    max-width: none;
+    margin-bottom: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.tour-info__button {
+  padding-right: 38px;
+  padding-left: 40px;
+
+  border: 0;
+}
+
+.tour-info__image-wrapper {
+  position: relative;
+
+  width: 61.9%;
+
+  @media #{$tablet-width} {
+    width: 100%;
+  }
+}
+
+.tour-info__image-wrapper img {
+  @media #{$tablet-width} {
+    @include size(100%, 415px);
+  }
+}
+
+.tour-info__review {
+  position: absolute;
+  top: 114px;
+  right: 65px;
+
+  @media #{$tablet-width} {
+    top: 80px;
+    right: 50%;
+  }
+
+  @media #{$mobile-width} {
+    top: 50px;
+  }
+}
