@@ -15,15 +15,13 @@
           <img src="img/logo.svg" width="57" height="22" alt="Логотип">
         </a>
       </div>
-      <!-- <div class="header__info"> -->
-        <nav class="header__nav">
-          <a class="header__link" href="#">О путешествии</a>
-          <a class="header__link" href="#">Цены</a>
-        </nav>
-        <div class="header__contacts">
-          <a class="header__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
-        </div>
-      <!-- </div> -->
+      <nav class="header__nav">
+        <a class="header__link" href="#">О путешествии</a>
+        <a class="header__link" href="#">Цены</a>
+      </nav>
+      <div class="header__contacts">
+        <a class="header__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+      </div>
       <div class="header__burger"><span></span></div>
     </div>
   </header>
@@ -32,8 +30,8 @@
     <section class="introduction">
       <div class="introduction__container">
         <div class="introduction__info">
-          <h1>Путешествие по Европпе</h1>
-          <p>В этом туре вы откроете для себя Европу в новом&nbsp;свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+          <h1>Путешествие по Европе</h1>
+          <p>В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
           <a class="introduction__link" href="#">Смотреть тур</a>
         </div>
       </div>
@@ -57,7 +55,7 @@
               <!-- 1x: 350px; 2x: 700px -->
               <img src="img/greece-small-desktop@1x.jpg" srcset="img/greece-small-desktop@2x.jpg 2x" width="350" height="430" alt="Дом на скале на фоне гор">
             </picture>
-            <a class="tours__link" href="#"></a>
+            <a class="tours__link" href="#">Cмотреть подробнее</a>
             <p>Греция</p>
           </li>
           <li class="tours__card">
@@ -73,7 +71,7 @@
               <!-- 1x: 350px; 2x: 700px -->
               <img src="img/albania-small-desktop@1x.jpg" srcset="img/albania-small-desktop@2x.jpg 2x" width="350" height="430" alt="Вид сверху на набережную и море">
             </picture>
-            <a class="tours__link" href="#"></a>
+            <a class="tours__link" href="#">Cмотреть подробнее</a>
             <p>Албания</p>
           </li>
           <li class="tours__card">
@@ -89,7 +87,7 @@
               <!-- 1x: 350px; 2x: 700px -->
               <img src="img/makedonia-small-desktop@1x.jpg" srcset="img/makedonia-small-desktop@2x.jpg 2x" width="350" height="430" alt="Церковь на фоне океана">
             </picture>
-            <a class="tours__link" href="#"></a>
+            <a class="tours__link" href="#">Cмотреть подробнее</a>
             <p>Македония</p>
           </li>
           <li class="tours__card">
@@ -105,7 +103,7 @@
               <!-- 1x: 350px; 2x: 700px -->
               <img src="img/montenegro-small-desktop@1x.jpg" srcset="img/montenegro-small-desktop@2x.jpg 2x" width="350" height="430" alt="Река посреди лиственного леса">
             </picture>
-            <a class="tours__link" href="#"></a>
+            <a class="tours__link" href="#">Cмотреть подробнее</a>
             <p>Черногория</p>
           </li>
           <li class="tours__card">
@@ -121,7 +119,7 @@
               <!-- 1x: 350px; 2x: 700px -->
               <img src="img/croatia-small-desktop@1x.jpg" srcset="img/croatia-small-desktop@2x.jpg 2x" width="350" height="430" alt="Подземная вода и сталактиты">
             </picture>
-            <a class="tours__link" href="#"></a>
+            <a class="tours__link" href="#">Cмотреть подробнее</a>
             <p>Хорватия</p>
           </li>
         </ul>
@@ -378,32 +376,47 @@
       <div class="footer__next-travels next-travels">
         <h3>Следующие путешествия</h3>
         <ul class="next-travels__list">
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Марсель</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Ним</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Монпелье</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Барселона</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Пальма</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Сардиния</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Палермо</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Катания</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Неаполь</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Рим</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Корс</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Ницца</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Монако</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Динь-ле-Бен</a></li>
-          <li class="next-travels__item"><a class="next-travels__link" href="#">Гренобль</a></li>
+          <ul class="next-travels__sublist">
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Марсель</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Ним</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Монпелье</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Барселона</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Пальма</a></li>
+          </ul>
+          <ul class="next-travels__sublist">
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Сардиния</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Палермо</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Катания</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Неаполь</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Рим</a></li>
+          </ul>
+          <ul class="next-travels__sublist">
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Корс</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Ницца</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Монако</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Динь-ле-Бен</a></li>
+            <li class="next-travels__item"><a class="next-travels__link" href="#">Гренобль</a></li>
+        </ul>
         </ul>
       </div>
       <div class="footer__contacts contacts">
         <h3>Наши контакты</h3>
-        <a class="contacts__link contacts__link--email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-        <a class="contacts__link contacts__link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+          </li>
+          <li class="contacts__item">
+            <svg class="contacts__icon--phone" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.39635 8.62432C7.31179 7.42623 7.57753 6.24606 8.28114 5.29684C8.89115 4.43632 9.68536 3.96636 10.6426 3.69172C11.4489 3.4525 11.9774 3.74561 12.2099 4.64204C12.5421 5.98224 13.0162 7.3225 13.1884 8.73361C13.2427 9.35485 12.8411 10.2332 12.4062 10.6856C11.3161 11.7589 11.5426 12.5399 12.37 14.1643C12.6267 14.6881 13.0344 15.5934 13.8286 16.7919C14.656 17.9992 15.0939 18.6472 16.1569 18.0975C17.3376 17.5035 18.1983 17.8855 19.0891 18.8444C19.6931 19.5369 20.3574 20.1318 20.9614 20.8243C21.8341 21.8542 21.7949 22.5641 21.1124 23.2915C19.8833 24.6309 17.854 25.0736 16.3441 24.1766C15.5106 23.6881 14.6802 23.0487 14.0188 22.303C11.1047 18.9825 9.00291 15.1212 7.73759 10.7632C7.53526 10.0265 7.44165 9.28104 7.39635 8.62432Z" stroke="#d7d9df" stroke-width="2" stroke-miterlimit="10"/>
+            </svg>
+            <a class="contacts__link contacts__link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          </li>
+        </ul>
       </div>
       <div class="footer__feature">
         <h3>Корпоративные путешествия</h3>
-        <p>Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию,
-          помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+        <p>Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные&nbsp;туры очень сближают
+          компанию,&nbsp;помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
       </div>
     </div>
   </footer>
