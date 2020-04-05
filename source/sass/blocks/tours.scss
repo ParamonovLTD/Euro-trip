@@ -2,76 +2,120 @@
   @include clear-list;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding-right: 65px;
+
+  @media #{$tablet-width} {
+    padding-right: 81px;
+    padding-left: 82px;
+  }
+
+  @media #{$mobile-width} {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 }
 
-.tours__card {
+.tours__card-inner {
   position: relative;
+  top: 0;
+
+  display: flex;
+  max-height: 430px;
+  transition-duration: 0.3s;
 
   &:hover {
-    &::before {
-      display: block;
-    }
+    background-color: rgba(20, 21, 23, 0.6);
   }
 
   &:hover .tours__link {
     display: block;
   }
+}
 
-  // Для всех, кроме первой карточки каждой строки, делает внешний отступ слева
-  &:not(:nth-of-type(3n + 1)) {
-    margin-left: 60px;
+.tours__card {
+  position: relative;
+
+  display: flex;
+
+  // Для первых трех отступ снизу
+  &:not(:nth-of-type(n + 4)) {
+    margin-bottom: 101px;
   }
 
-  // Для всех, кроме первых трех, делает отступ сверху
-  &:nth-of-type(n + 4) {
-    margin-top: 92px;
+  // Для каждой первой карточки, начиная со второй строки, и для каждой серединной карточки,
+  // если она последняя,делает, чтобы они были в центре
+  &:nth-of-type(3n + 4),
+  &:nth-of-type(3n + 2):last-of-type {
+    flex-grow: 1;
+    max-width: 525px;
   }
 
-  // Для последней добавляет увеличенный отступ
+  // Каждую первую карточку прижимает к правому краю от максимальной длины
+  &:nth-of-type(3n+1) {
+    justify-content: flex-end;
+  }
+
+  // Если в ряду оказалось 3 карточки, то убирает у первой занимание свободного места
+  &:nth-last-of-type(3n) {
+    flex-grow: 0;
+  }
+
+  // Последнюю прижимает к левому краю максимальной длины
   &:last-of-type {
-    margin-left: 120px;
+    justify-content: flex-start;
   }
 
-  // Если последняя оказалась последней в строке, убирает увеличенный отступ
-  &:nth-of-type(3n) {
-    margin-left: 60px;
+  @media #{$tablet-width} {
+    // Первым трем изменяет отступ
+    &:nth-of-type(-n + 3) {
+      margin-bottom: 15px;
+    }
+
+    // Всем, кроме первых 4 добавляет отступ сверху
+    &:nth-of-type(n + 5) {
+      margin-top: 10px;
+    }
+
+    // Для серединной карточки, если она последняя, убирает ограничение по длине,
+    // чтобы, если она одна в строке, она была по центру
+    &:nth-of-type(3n + 2):last-of-type {
+      max-width: none;
+      justify-content: center;
+    }
   }
 
-  // Каждой первую карточку каждой строкиприжимает к левому краю и убирает отступ слева,
-  // если кроме нее на этой строке карточек нет
-  &:nth-of-type(3n + 1) {
-    margin-right: auto;
-    margin-left: 0;
-  }
+  @media #{$mobile-width} {
+    // Делает, чтобы все были по центру
+    // (Первые 2 строки для повышения специфичности)
+    &:nth-of-type(3n),
+    &:nth-of-type(3n+1),
+    & {
+      flex-grow: 1;
+      justify-content: center;
+      max-width: none;
+    }
 
-  // Если на строке 2 карточки, убирает для первой прижимание к левому краю
-  // (Здесь нужно было написать без n, под критерий оно бы подошло, но на всякий)))
-  &:nth-last-of-type(n + 2) {
-    margin-right: 0;
-  }
+    // Для всех, кроме последней, делает отступ снизу
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
 
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    display: none;
-    width: 100%;
-    max-width: 350px;
-    height: 100%;
-
-    background-color: rgba(20, 21, 23, 0.6);
+    // У всех, кроме первых 4, убирает ранее введенный отступ
+    &:nth-of-type(n + 5) {
+      margin-top: 0;
+    }
   }
 }
 
 .tours__card img {
   position: relative;
   z-index: -1;
+
+  @media #{$tablet-width} {
+    @include size(288px, 425px);
+  }
 }
 
 .tours__link {
@@ -94,7 +138,7 @@
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-.tours__card > p {
+.tours__card-inner > p {
   position: absolute;
   bottom: 0;
   right: 50%;
@@ -102,7 +146,7 @@
   @include clear-block;
   width: 215px;
   padding-top: 16px;
-  padding-bottom: 25px;
+  padding-bottom: 17px;
 
   @include font(500, 24px, 29px, $font-montserrat);
   text-align: center;
@@ -111,21 +155,10 @@
   background-color: #ffffff;
 
   transform: translateX(50%);
-}
 
-// Для последнего, если он не в начале строки и не в конце, изменяет рассчет, тк у него больше размер
-.tours__card:last-of-type > p {
-  right: 42.4%;
-}
+  @media #{$tablet-width} {
+    bottom: 5px;
 
-.tours__card:nth-of-type(3n) > p {
-  & > p {
-    right: 50%;
-  }
-}
-
-.tours__card:nth-of-type(3n + 1) > p {
-  & > p {
-    right: 50%;
+    padding-bottom: 16px;
   }
 }
