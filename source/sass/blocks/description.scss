@@ -1,0 +1,15 @@
+.description {
+  padding-top: 22px;
+
+  @media #{$tablet-width} {
+    padding-top: 18px;
+  }
+
+  @media #{$mobile-width} {
+    padding-top: 15px;
+  }
+}
+
+.description__container {
+  @include container;
+}

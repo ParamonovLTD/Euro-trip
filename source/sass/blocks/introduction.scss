@@ -91,15 +91,13 @@
 }
 
 .introduction__link {
-  @include button;
-  @include size(340px);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  // width: 340px;
+  // padding-top: 30px;
+  // padding-bottom: 30px;
+  padding-right: 40px;
   padding-left: 40px;
 
   text-align: left;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 
   &::after {
     content: "";
@@ -116,7 +114,7 @@
   @media #{$tablet-width} {
     left: 17.1%;
 
-    // transform: none;
+    transform: none;
 
     &::after {
       top: 17px;
@@ -126,5 +124,7 @@
 
   @media #{$mobile-width} {
     left: 50%;
+
+    transform: translate(-50%);
   }
 }

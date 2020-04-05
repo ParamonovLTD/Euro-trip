@@ -1,5 +1,6 @@
 .places {
   padding-top: 200px;
+  padding-bottom: 60px;
 
   @media #{$tablet-width} {
     padding-top: 80px;
@@ -7,6 +8,7 @@
 
   @media #{$mobile-width} {
     padding-top: 42px;
+    padding-bottom: 5px;
   }
 }
 

@@ -5,7 +5,7 @@
   font-family: $font;
 }
 
-@mixin size($width, $height: auto) {
+@mixin size($width, $height) {
   width: $width;
   height: $height;
 }
@@ -53,38 +53,6 @@
   @include clear-block;
   @include font(600, 18px, 32px, $font-montserrat);
   color: $dark;
-}
-
-@mixin button {
-  position: relative;
-
-  display: block;
-
-  @include font(700, 12px, 15px, $font-montserrat);
-  text-align: center;
-
-  background-color: $main-accent;
-
-  @media #{$tablet-width} {
-    // left: 50%;
-    width: 250px;
-    padding-top: 20px;
-    padding-bottom: 18px;
-
-    @include font(500, 10px, 12px, $font-montserrat);
-    letter-spacing: 2px;
-
-    // transform: translate(-50%);
-  }
-
-  @media #{$mobile-width} {
-    left: 50%;
-    width: 288px;
-    padding-top: 20px;
-    padding-bottom: 18px;
-
-    transform: translateX(-50%);
-  }
 }
 
 @mixin container {

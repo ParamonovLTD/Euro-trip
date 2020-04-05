@@ -3,6 +3,7 @@
 @import "general/variables.scss";
 @import "general/mixins.scss";
 @import "general/global.scss";
+@import "blocks/button.scss";
 @import "blocks/header.scss";
 @import "blocks/introduction.scss";
 @import "blocks/footer.scss";
@@ -10,3 +11,7 @@
 @import "blocks/contacts.scss";
 @import "blocks/places.scss";
 @import "blocks/tours.scss";
+@import "blocks/description.scss";
+@import "blocks/tabs.scss";
+@import "blocks/tour-info.scss";
+@import "blocks/review.scss";
