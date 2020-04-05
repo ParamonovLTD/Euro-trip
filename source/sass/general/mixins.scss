@@ -26,28 +26,58 @@
   @include clear-block;
   @include font(600, 55px, 80px, $font-montserrat);
   color: $dark;
+
+  @media #{$tablet-width} {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  @media #{$mobile-width} {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@mixin subtitle {
+  @include clear-block;
+  @include font(600, 18px, 32px, $font-montserrat);
+  color: $dark;
 }
 
 @mixin button {
+  position: relative;
+
   display: block;
 
   @include font(700, 12px, 15px, $font-montserrat);
   text-align: center;
 
   background-color: $main-accent;
+
+  @media #{$tablet-width} {
+    // left: 50%;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+
+    @include font(500, 10px, 12px, $font-montserrat);
+    letter-spacing: 2px;
+
+    // transform: translate(-50%);
+  }
+
+  @media #{$mobile-width} {
+    left: 50%;
+    width: 288px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+
+    transform: translateX(-50%);
+  }
 }
 
 @mixin container {
   max-width: 1300px;
   margin: 0 auto;
-
-  // @media #{$tablet-width} {
-  //   padding-right: 30px;
-  //   padding-left: 30px;
-  // }
-
-  // @media #{$mobile-width} {
-  //   padding-right: 20px;
-  //   padding-left: 20px;
-  // }
+  padding-left: 65px;
 }

@@ -1,0 +1,28 @@
+.places {
+  padding-top: 200px;
+}
+
+.places__container {
+  @include container;
+}
+
+.places__container h2 {
+  @include title;
+  max-width: 385px;
+  margin-bottom: 63px;
+
+  letter-spacing: -1.25px;
+}
+
+.places__container > p {
+  @include clear-block;
+  max-width: 340px;
+  margin-bottom: 55px;
+
+  letter-spacing: -0.47px;
+  color: rgba(44, 46, 63, 0.7);
+}
+
+// .places__cards {
+
+// }

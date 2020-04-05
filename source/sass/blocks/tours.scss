@@ -1,0 +1,131 @@
+.tours {
+  @include clear-list;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-right: 65px;
+}
+
+.tours__card {
+  position: relative;
+
+  &:hover {
+    &::before {
+      display: block;
+    }
+  }
+
+  &:hover .tours__link {
+    display: block;
+  }
+
+  // Для всех, кроме первой карточки каждой строки, делает внешний отступ слева
+  &:not(:nth-of-type(3n + 1)) {
+    margin-left: 60px;
+  }
+
+  // Для всех, кроме первых трех, делает отступ сверху
+  &:nth-of-type(n + 4) {
+    margin-top: 92px;
+  }
+
+  // Для последней добавляет увеличенный отступ
+  &:last-of-type {
+    margin-left: 120px;
+  }
+
+  // Если последняя оказалась последней в строке, убирает увеличенный отступ
+  &:nth-of-type(3n) {
+    margin-left: 60px;
+  }
+
+  // Каждой первую карточку каждой строкиприжимает к левому краю и убирает отступ слева,
+  // если кроме нее на этой строке карточек нет
+  &:nth-of-type(3n + 1) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  // Если на строке 2 карточки, убирает для первой прижимание к левому краю
+  // (Здесь нужно было написать без n, под критерий оно бы подошло, но на всякий)))
+  &:nth-last-of-type(n + 2) {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+
+    background-color: rgba(20, 21, 23, 0.6);
+  }
+}
+
+.tours__card img {
+  position: relative;
+  z-index: -1;
+}
+
+.tours__link {
+  display: none;
+  position: absolute;
+  top: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 266px;
+  padding-top: 31px;
+  padding-bottom: 29px;
+
+  @include font(500, 14px, 17px, $font-montserrat);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.tours__card > p {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+
+  @include clear-block;
+  width: 215px;
+  padding-top: 16px;
+  padding-bottom: 25px;
+
+  @include font(500, 24px, 29px, $font-montserrat);
+  text-align: center;
+  color: $dark;
+
+  background-color: #ffffff;
+
+  transform: translateX(50%);
+}
+
+// Для последнего, если он не в начале строки и не в конце, изменяет рассчет, тк у него больше размер
+.tours__card:last-of-type > p {
+  right: 42.4%;
+}
+
+.tours__card:nth-of-type(3n) > p {
+  & > p {
+    right: 50%;
+  }
+}
+
+.tours__card:nth-of-type(3n + 1) > p {
+  & > p {
+    right: 50%;
+  }
+}
