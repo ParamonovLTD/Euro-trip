@@ -34,10 +34,11 @@
     content: "";
 
     @include title-underline;
-    @include size(229px, 4px);
 
     bottom: -32px;
     left: 0;
+
+    @include size(229px, 4px);
   }
 
   @media #{$tablet-width} {

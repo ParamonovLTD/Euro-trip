@@ -39,10 +39,10 @@
   &::after {
     content: "";
 
+    @include title-underline;
+
     bottom: -17px;
     left: 0;
-
-    @include title-underline;
   }
 
   @media #{$tablet-width} {

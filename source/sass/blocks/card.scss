@@ -1,0 +1,163 @@
+.card {
+  position: relative;
+  max-width: 370px;
+  padding-top: 38px;
+  padding-right: 29px;
+  padding-bottom: 80px;
+  padding-left: 29px;
+
+  @include font(400, 16px, 24px, $font-montserrat);
+  color: $dark;
+
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  border-radius: 6px;
+
+  &:hover {
+    padding-top: 36px;
+    padding-right: 27px;
+    padding-bottom: 78px;
+    padding-left: 27px;
+
+    border-width: 3px;
+    border-color: $main-accent;
+  }
+
+  &:hover .card__title {
+    color: $main-accent;
+  }
+
+  &:hover > p::after {
+    background-color: $main-accent;
+    opacity: 0.5;
+  }
+
+  &:hover .features__item::before {
+    top: 5px;
+    left: -4px;
+
+    background-image: url("../../img/icon-checkmark-black.svg");
+  }
+
+  &--different-mark-coords .features__item::before {
+    top: 10px;
+    left: 3px;
+  }
+
+  &--different-mark-coords:hover .features__item::before {
+    top: 5px;
+    left: 0;
+  }
+
+  @media #{$tablet-width} {
+    max-width: 290px;
+    padding-top: 31px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+
+    &:hover {
+      padding-top: 29px;
+      padding-right: 18px;
+      padding-bottom: 48px;
+      padding-left: 18px;
+
+      border-bottom-width: 1px;
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
+  @media #{$mobile-width} {
+    margin-bottom: 29px;
+  }
+}
+
+.card__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+
+
+  color: rgba(20, 21, 23, 0.7);
+
+  &--letter-spacing > h3 {
+    letter-spacing: -1.27px;
+  }
+
+  @media #{$tablet-width} {
+    flex-direction: column;
+    min-height: 72px;
+    margin-bottom: 17px;
+  }
+}
+
+.card__title > h3 {
+  @include clear-block;
+  @include font(600, 28px, 38px, $font-montserrat);
+
+  @media #{$tablet-width} {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+.card__price {
+  @include clear-block;
+
+  font-weight: 700;
+  font-size: 25px;
+
+  @media #{$tablet-width} {
+    margin-right: 10px;
+
+    &--smaller-margin {
+      margin-right: 0;
+    }
+  }
+}
+
+.card > p {
+  position: relative;
+
+  @include clear-block;
+  margin-bottom: 59px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+
+    @include size(100%, 1px);
+
+    background-color: rgba(44, 46, 63, 0.3);
+  }
+
+  @media #{$tablet-width} {
+    margin-bottom: 30px;
+
+    &::after {
+      bottom: -9px;
+    }
+  }
+}
+
+.card__button {
+  position: absolute;
+  bottom: 29px;
+
+  width: 84.3%;
+
+  border: 0;
+
+  cursor: pointer;
+
+  @media #{$tablet-width} {
+    bottom: -1px;
+
+    width: calc(100% + 2px);
+  }
+}

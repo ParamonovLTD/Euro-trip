@@ -1,0 +1,23 @@
+.rates {
+  @include clear-list;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  max-width: 770px;
+
+  @media #{$tablet-width} {
+    max-width: none;
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  @media #{$mobile-width} {
+    flex-wrap: wrap;
+    // justify-content: center;
+
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}

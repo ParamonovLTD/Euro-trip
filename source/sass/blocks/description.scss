@@ -1,8 +1,10 @@
 .description {
   padding-top: 22px;
+  padding-bottom: 190px;
 
   @media #{$tablet-width} {
     padding-top: 18px;
+    padding-bottom: 50px;
   }
 
   @media #{$mobile-width} {
