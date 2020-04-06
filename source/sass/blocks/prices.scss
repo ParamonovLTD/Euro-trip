@@ -1,0 +1,134 @@
+.prices {
+  padding-top: 41px;
+
+  @media #{$tablet-width} {
+    padding-top: 53px;
+    text-align: center;
+  }
+}
+
+.prices__container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 54px;
+
+  @media #{$tablet-width} {
+    flex-direction: column;
+    padding-right: 0;
+  }
+}
+
+.prices__text {
+  order: 1;
+  max-width: 300px;
+  padding-top: 112px;
+
+  @media #{$tablet-width} {
+    order: 0;
+
+    max-width: none;
+    margin-bottom: 28px;
+    padding-top: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media #{$mobile-width} {
+    margin-bottom: 38px;
+  }
+}
+
+.prices__text > h2 {
+  @include title;
+  margin-bottom: 47px;
+
+  line-height: 90px;
+
+  &::after {
+    content: "";
+
+    @include title-underline;
+
+    bottom: -17px;
+    left: 0;
+  }
+
+  @media #{$tablet-width} {
+    margin-bottom: 20px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.prices__text > p {
+  @include clear-block;
+  margin-bottom: 62px;
+
+  @include font(400, 16px, 27px, $font-montserrat);
+
+  color: rgba(44, 46, 63, 0.7);
+
+  @media #{$tablet-width} {
+    margin-bottom: 33px;
+  }
+
+  @media #{$mobile-width} {
+    margin-bottom: 18px;
+  }
+}
+
+.prices__contacts {
+  padding-left: 46px;
+
+  @media #{$tablet-width} {
+    padding-left: 0;
+  }
+}
+
+.prices__contacts > p {
+  @include clear-block;
+  margin-bottom: 11px;
+
+  @include font(500, 22px, 34px, $font-montserrat);
+  color: $deep-dark;
+
+  @media #{$tablet-width} {
+    font-size: 18px;
+  }
+}
+
+.prices__phone {
+  position: relative;
+
+  @include clear-block;
+  padding-left: 0;
+
+  @include font(400, 20px, 32px, $font-montserrat);
+  color: #000000;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: -50px;
+
+    @include size(30px, 30px);
+
+    background: #ffffff url("../../img/icon-phone.svg") no-repeat 0 0;
+  }
+
+  @media #{$tablet-width} {
+    font-size: 18px;
+
+    text-decoration: underline;
+    color: $main-accent;
+
+    &::before {
+      display: none;
+    }
+  }
+}
