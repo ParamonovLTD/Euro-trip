@@ -1,0 +1,131 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form > h3 {
+  @include clear-block;
+  margin-bottom: 12px;
+
+  @include font(600, 25px, 32px, $font-montserrat);
+  color: $deep-dark;
+
+  @media #{$mobile-width} {
+    margin-bottom: 20px;
+  }
+}
+
+.form > p {
+  @include clear-block;
+  margin-bottom: 23px;
+
+  @include font(400, 16px, 24px, $font-montserrat);
+  color: $deep-dark;
+
+  @media #{$mobile-width} {
+    margin-bottom: 19px;
+  }
+}
+
+.form__inputs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 25px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 20px;
+  }
+
+  @media #{$mobile-width} {
+    flex-direction: column;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.form__input-wrapper {
+  max-width: 269px;
+  width: 100%;
+
+  &:first-of-type {
+    margin-right: 20px;
+  }
+
+  &--required {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 6px;
+      left: 15px;
+
+      @include size(6px, 26px);
+
+      background: #ffffff url("../../img/icon-required.svg") no-repeat 0 0;
+    }
+  }
+
+  @media #{$mobile-width} {
+    max-width: none;
+    // width: 100%;
+
+    &:first-of-type {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.form__inputs-wrapper input {
+  width: 100%;
+  padding: 0;
+  padding-top: 15px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+
+  border: 1px solid rgba(44, 46, 63, 0.3);
+
+  &::placeholder {
+    @include font(400, 14px, 17px, $font-montserrat);
+    color: $deep-dark;
+  }
+}
+
+.form > input[type="submit"] {
+  width: 176px;
+  padding: 0;
+  padding-top: 19px;
+  // padding-right: 38px;
+  padding-bottom: 15px;
+  // padding-left: 38px;
+
+  @include font(700, 12px, 15px, $font-montserrat);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+
+  background-color: $main-accent;
+  border: none;
+
+  @media #{$tablet-width} {
+    width: 250px;
+    padding-top: 21px;
+    // padding-right: 81px;
+    padding-bottom: 17px;
+    // padding-left: 85px;
+
+    @include font(500, 10px, 12px, $font-montserrat);
+  }
+
+  @media #{$mobile-width} {
+    width: 288px;
+  }
+}
