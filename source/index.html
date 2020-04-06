@@ -400,13 +400,19 @@
     <section class="feedback">
       <div class="feedback__container">
         <!--Скрыть заголовок-->
-        <h2>Обратная связь</h2>
+        <h2 class="visually-hidden">Обратная связь</h2>
         <div class="feedback__form-wrapper">
-          <form class="form" method="post" action="https://echo.htmlacademy.ru">
+          <form class="feedback__form form" method="post" action="https://echo.htmlacademy.ru">
             <h3>У Вас остались вопросы?</h3>
             <p>Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-            <input type="tel">
-            <input type="email">
+            <div class="form__inputs-wrapper">
+              <div class="form__input-wrapper form__input-wrapper--required">
+                <input type="tel" placeholder="Введите 10 цифр номера" required>
+              </div>
+              <div class="form__input-wrapper">
+                <input type="email" placeholder="E-mail">
+              </div>
+            </div>
             <input type="submit" value="Отправить">
           </form>
         </div>

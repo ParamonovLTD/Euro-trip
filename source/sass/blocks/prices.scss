@@ -1,9 +1,14 @@
 .prices {
   padding-top: 41px;
+  padding-bottom: 90px;
 
   @media #{$tablet-width} {
     padding-top: 53px;
     text-align: center;
+  }
+
+  @media #{$mobile-width} {
+    padding-bottom: 15px;
   }
 }
 
