@@ -2,7 +2,7 @@
   "name": "euro-trip",
   "version": "17.0.0",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Стартовый шаблон сборки Лиги А",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "^9.5.1",
@@ -30,9 +30,12 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
+    "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "gulp start",
+    "images": "gulp images",
+    "webp": "gulp webp",
+    "sprite": "gulp sprite"
   },
   "browserslist": [
     "last 2 versions",
@@ -45,26 +48,12 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/less/**/*.less"
+    "source/sass/**/*.{sass,scss}"
   ],
   "engines": {
     "node": "8.16"
   },
   "dependencies": {
     "del": "^5.1.0"
-  },
-  "main": "gulpfile.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SnowballBoy/Euro-trip.git"
-  },
-  "keywords": [
-    "potno"
-  ],
-  "author": "Roma",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SnowballBoy/Euro-trip/issues"
-  },
-  "homepage": "https://github.com/SnowballBoy/Euro-trip#readme"
+  }
 }

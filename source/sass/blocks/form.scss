@@ -20,7 +20,7 @@
   @include clear-block;
   margin-bottom: 23px;
 
-  @include font(400, 16px, 24px, $font-montserrat);
+  line-height: 24px;
   color: $deep-dark;
 
   @media #{$mobile-width} {
@@ -48,9 +48,11 @@
   }
 }
 
-.form__input-wrapper {
-  max-width: 269px;
+.form__input-control {
+  position: relative;
+
   width: 100%;
+  max-width: 269px;
 
   &:first-of-type {
     margin-right: 20px;
@@ -74,7 +76,6 @@
 
   @media #{$mobile-width} {
     max-width: none;
-    // width: 100%;
 
     &:first-of-type {
       margin-right: 0;
@@ -83,7 +84,22 @@
   }
 }
 
-.form__inputs-wrapper input {
+.form__input-control small {
+  position: absolute;
+  top: -16px;
+  left: 0;
+
+  @include font(400, 12px, 15px, $font-montserrat);
+  color: $main-accent;
+
+  visibility: hidden;
+}
+
+.form__input-control--error small {
+  visibility: visible;
+}
+
+.form__input-control input {
   width: 100%;
   padding: 0;
   padding-top: 15px;
@@ -99,13 +115,19 @@
   }
 }
 
-.form > input[type="submit"] {
+.form__input-control input[type="tel"] {
+  padding-left: 23px;
+}
+
+.form__input-control--error input {
+  border-color: $main-accent;
+}
+
+.form > button[type="submit"] {
   width: 176px;
   padding: 0;
   padding-top: 19px;
-  // padding-right: 38px;
   padding-bottom: 15px;
-  // padding-left: 38px;
 
   @include font(700, 12px, 15px, $font-montserrat);
   text-transform: uppercase;
@@ -115,12 +137,16 @@
   background-color: $main-accent;
   border: none;
 
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-accent;
+  }
+
   @media #{$tablet-width} {
     width: 250px;
     padding-top: 21px;
-    // padding-right: 81px;
     padding-bottom: 17px;
-    // padding-left: 85px;
 
     @include font(500, 10px, 12px, $font-montserrat);
   }

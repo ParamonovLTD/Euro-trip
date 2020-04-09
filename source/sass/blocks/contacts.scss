@@ -76,6 +76,11 @@
   &--phone {
     position: relative;
     top: 5px;
+
+    fill: none;
+    stroke: #d7d9df;
+
+    cursor: pointer;
   }
 }
 
@@ -99,14 +104,14 @@
 
       @include size(26px, 20px);
 
-      background: url("../img/icon-email.svg") no-repeat 0 0;
+      background: url("../../img/icon-email.svg") no-repeat 0 0;
     }
   }
 
   &--phone {
     padding-left: 7px;
 
-    @include font(400, 16px, 32px, $font-montserrat);
+    line-height: 32px;
   }
 
   @media #{$tablet-width} {

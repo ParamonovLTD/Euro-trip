@@ -4,6 +4,7 @@
   @include clear-list;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 903px;
   margin-bottom: 80px;
 
@@ -14,16 +15,22 @@
     bottom: -1px;
     left: 0;
 
-    @include size(100%, 1px);
+    @include size(900px, 1px);
 
     background-color: rgba(44, 46, 63, 0.3);
   }
 
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
   @media #{$tablet-width} {
-    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    margin-bottom: 3px;
     padding-left: 37px;
 
-    overflow-x: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
 
     &::after {
       bottom: 0;
@@ -32,7 +39,7 @@
   }
 
   @media #{$mobile-width} {
-    margin-bottom: 12px;
+    margin-bottom: 0;
     padding-left: 15px;
 
     &::after {

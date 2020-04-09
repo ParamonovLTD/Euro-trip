@@ -26,20 +26,12 @@
     background: #ffffff url("../../img/icon-checkmark-orange.svg") no-repeat 0 0;
   }
 
-  &--smaller-height {
-    max-height: 55px;
-  }
-
   @media #{$tablet-width} {
     margin-bottom: 10px;
-
-    &--smaller-height {
-      max-height: 59px;
-    }
   }
 }
 
-.features__text {
+.features__item p {
   @include clear-block;
   padding-left: 30px;
 

@@ -1,0 +1,20 @@
+.success {
+  background-color: #fbf8f8;
+}
+
+.success__text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include size(100%, 100%);
+}
+
+.success__text-wrapper p {
+  @include clear-block;
+  max-width: 500px;
+
+  @include font(500, 25px, 43px, $font-montserrat);
+  text-align: center;
+  color: #48494d;
+}

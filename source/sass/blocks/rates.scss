@@ -4,7 +4,6 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   flex-grow: 1;
-
   max-width: 770px;
 
   @media #{$tablet-width} {
@@ -15,8 +14,6 @@
 
   @media #{$mobile-width} {
     flex-wrap: wrap;
-    // justify-content: center;
-
     padding-right: 14px;
     padding-left: 14px;
   }

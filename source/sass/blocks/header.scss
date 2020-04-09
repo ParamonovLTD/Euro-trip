@@ -39,42 +39,47 @@
   }
 }
 
-.header__logo img {
+.header__logo > img {
   @media #{$tablet-width} {
     @include size(44px, 17px);
   }
 }
 
-
-// .header__info {
-//   display: flex;
-//   flex-direction: row;
-
-//   @media #{$mobile-width} {
-//     // width: 100%;
-//     // min-height: 568px;
-//   }
-// }
-
 .header__nav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  min-width: 194px;
 
   @media #{$tablet-width} {
     position: absolute;
+    z-index: 1;
 
     display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-width: 320px;
+    min-height: 450px;
+    padding-top: 134px;
+
+    background-color: #ffffff;
 
     &--opened {
       display: flex;
     }
+
+    &--nojs {
+      position: relative;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      width: 100%;
+      min-height: auto;
+      padding-top: 0;
+    }
   }
 
   @media #{$mobile-width} {
-    z-index: 1;
-
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -84,15 +89,75 @@
 
     background-color: #ffffff;
 
+    &--opened {
+      display: flex;
+    }
+
     &--nojs {
       position: relative;
 
       display: flex;
+      align-items: flex-end;
+      min-width: 100%;
+      max-width: 320px;
+    }
+  }
+}
+
+.header__nav--nojs .header__link {
+  @media #{$tablet-width} {
+    max-width: 240px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+
+    font-size: 16px;
+
+    background-color: #f9f9f9;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0;
     }
 
-    &--opened {
-      display: flex;
+    &::after {
+      top: 15px;
+      right: 16px;
     }
+  }
+
+  @media #{$mobile-width} {
+    min-width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.header__nav--opened ~ .header__burger {
+  @media #{$tablet-width} {
+    z-index: 2;
+
+    background-color: #ffffff;
+
+    &::before {
+      top: 12px;
+      left: 23px;
+
+      background-image: url("../../img/icon-close.svg");
+    }
+  }
+
+  @media #{$mobile-width} {
+    &::before {
+      top: 13px;
+      left: 14px;
+    }
+  }
+}
+
+.header__nav--nojs ~ .header__burger {
+  @media #{$tablet-width} {
+    display: none;
   }
 }
 
@@ -100,7 +165,15 @@
   @include font(500, 14px, 17px, $font-montserrat);
   color: $deep-dark;
 
-  @media #{$mobile-width} {
+  &:hover {
+    color: $main-accent;
+  }
+
+  &:not(:first-of-type) {
+    margin-left: 40px;
+  }
+
+  @media #{$tablet-width} {
     position: relative;
 
     width: 100%;
@@ -112,6 +185,10 @@
     color: #48494d;
 
     background-color: #fbf8f8;
+
+    &:not(:first-of-type) {
+      margin-left: 0;
+    }
 
     &:not(:last-of-type) {
       margin-bottom: 30px;
@@ -126,7 +203,7 @@
 
       @include size(25px, 25px);
 
-      background: #fbf8f8 url("../img/icon-right_arrow.svg") no-repeat 0 0;
+      background: #fbf8f8 url("../../img/icon-right_arrow.svg") no-repeat 0 0;
     }
   }
 }
@@ -154,6 +231,7 @@
     left: -2px;
 
     @include size(30px, 30px);
+
     background: url("../../img/icon-phone.svg") no-repeat 0 0;
   }
 
@@ -165,6 +243,7 @@
     right: 0;
 
     @include size(83%, 2px);
+
     background-color: $main-accent;
   }
 }
@@ -180,62 +259,25 @@
     @include size(72px, 50px);
 
     background-color: $main-accent;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 10px;
+      left: 21px;
+
+      @include size(30px, 30px);
+
+      background: url("../../img/icon-burger.svg") no-repeat 0 0;
+    }
   }
 
   @media #{$mobile-width} {
     @include size(50px, 50px);
 
-    &--opened {
-      position: absolute;
-      z-index: 2;
-
-      background: #ffffff url("../../img/icon-close.svg") no-repeat 13px 15px;
-    }
-  }
-}
-
-.header__burger span {
-  display: none;
-
-  @media #{$tablet-width} {
-    position: absolute;
-    top: 24px;
-    left: 25px;
-
-    display: block;
-
-    @include size(22px, 1px);
-
-    background-color: #dadada;
-
-    &::before,
-    &::after {
-      content: "";
-
-      position: absolute;
-      left: 0;
-
-      @include size(22px, 1px);
-
-      background-color: #dadada;
-    }
-
     &::before {
-      top: -7px;
+      left: 10px;
     }
-
-    &::after {
-      top: 6px;
-    }
-  }
-
-  @media #{$mobile-width} {
-    left: 14px;
-  }
-}
-
-.header__burger--opened span {
-  @media #{$mobile-width} {
-    display: none;
   }
 }

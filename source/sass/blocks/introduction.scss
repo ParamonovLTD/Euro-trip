@@ -1,13 +1,29 @@
 .introduction {
   background: #4e7b9d url("../../img/introduction-bg-desktop@1x.jpg") no-repeat 0 0;
+  background-size: 100% 860px;
+
+  @media #{$retina-dppx} {
+    background-image: url("../../img/introduction-bg-desktop@2x.jpg");
+    background-size: auto 860px;
+  }
 
   @media #{$tablet-width} {
     background-image: url("../../img/introduction-bg-tablet@1x.jpg");
+    background-size: 100% 344px;
+
+    @media #{$retina-dppx} {
+      background-image: url("../../img/introduction-bg-tablet@2x.jpg");
+    }
   }
 
   @media #{$mobile-width} {
     background-color: #ffffff;
     background-image: url("../../img/introduction-bg-mobile@1x.jpg");
+    background-size: 100% 235px;
+
+    @media #{$retina-dppx} {
+      background-image: url("../../img/introduction-bg-mobile@2x.jpg");
+    }
   }
 }
 
@@ -34,14 +50,20 @@
 
   @media #{$tablet-width} {
     top: 17.4%;
-    left: 24.5%;
+    right: 21.8%;
+    left: auto;
   }
 
   @media #{$mobile-width} {
     top: 16.4%;
     left: 0;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    min-height: 351px;
     padding-right: 16px;
     padding-left: 16px;
 
@@ -72,7 +94,7 @@
   max-width: 350px;
   margin-bottom: 35px;
 
-  @include font(400, 16px, 27px, $font-montserrat);
+  line-height: 27px;
   letter-spacing: -0.47px;
   color: #ffffff;
 
@@ -92,8 +114,6 @@
 
 .introduction__link {
   width: 340px;
-  // padding-top: 30px;
-  // padding-bottom: 30px;
   padding-right: 40px;
   padding-left: 40px;
 
@@ -108,7 +128,7 @@
 
     @include size(15px, 15px);
 
-    background: url("../img/icon-down_arrow-big.svg") no-repeat 0 0;
+    background: url("../../img/icon-down_arrow-big.svg") no-repeat 0 0;
   }
 
   @media #{$tablet-width} {
@@ -125,10 +145,10 @@
   }
 
   @media #{$mobile-width} {
-    left: 50%;
+    left: 0;
 
     width: 288px;
 
-    transform: translate(-50%);
+    transform: none;
   }
 }

@@ -4,6 +4,7 @@
 
   @media #{$tablet-width} {
     padding-top: 53px;
+
     text-align: center;
   }
 
@@ -31,7 +32,6 @@
 
   @media #{$tablet-width} {
     order: 0;
-
     max-width: none;
     margin-bottom: 28px;
     padding-top: 0;
@@ -72,8 +72,7 @@
   @include clear-block;
   margin-bottom: 62px;
 
-  @include font(400, 16px, 27px, $font-montserrat);
-
+  line-height: 27px;
   color: rgba(44, 46, 63, 0.7);
 
   @media #{$tablet-width} {
@@ -93,7 +92,7 @@
   }
 }
 
-.prices__contacts > p {
+.prices__contacts p {
   @include clear-block;
   margin-bottom: 11px;
 
@@ -128,9 +127,9 @@
 
   @media #{$tablet-width} {
     font-size: 18px;
+    color: $main-accent;
 
     text-decoration: underline;
-    color: $main-accent;
 
     &::before {
       display: none;
