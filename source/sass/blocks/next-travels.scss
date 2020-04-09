@@ -40,7 +40,22 @@
   }
 
   @media #{$mobile-width} {
+    position: relative;
+    left: 50%;
+
     justify-content: center;
+
+    transform: translateX(-50%);
+  }
+}
+
+.next-travels__list-item {
+  @media #{$mobile-width} {
+    min-width: 50%;
+
+    &:last-of-type {
+      margin-top: 9px;
+    }
   }
 }
 
@@ -53,8 +68,6 @@
   max-height: 163px;
 
   @media #{$mobile-width} {
-    min-width: 50%;
-
     &:nth-of-type(n + 3) {
       margin-top: 8px;
     }

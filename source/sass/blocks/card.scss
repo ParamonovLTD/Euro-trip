@@ -22,32 +22,6 @@
     border-color: $main-accent;
   }
 
-  &:hover .card__title {
-    color: $main-accent;
-  }
-
-  &:hover > p::after {
-    background-color: $main-accent;
-    opacity: 0.5;
-  }
-
-  &:hover .features__item::before {
-    top: 5px;
-    left: -4px;
-
-    background-image: url("../../img/icon-checkmark-black.svg");
-  }
-
-  &--different-mark-coords .features__item::before {
-    top: 10px;
-    left: 3px;
-  }
-
-  &--different-mark-coords:hover .features__item::before {
-    top: 5px;
-    left: 0;
-  }
-
   @media #{$tablet-width} {
     max-width: 290px;
     padding-top: 31px;
@@ -58,7 +32,7 @@
     &:hover {
       padding-top: 29px;
       padding-right: 18px;
-      padding-bottom: 48px;
+      padding-bottom: 50px;
       padding-left: 18px;
 
       border-bottom-width: 1px;
@@ -68,6 +42,33 @@
 
   @media #{$mobile-width} {
     margin-bottom: 29px;
+    padding-bottom: 46px;
+  }
+}
+
+.card:hover .card__title {
+  color: $main-accent;
+}
+
+.card:hover > p::after {
+  background-color: $main-accent;
+  opacity: 0.5;
+}
+
+.card:hover .features__item::before {
+  top: 5px;
+  left: -4px;
+
+  background-image: url("../../img/icon-checkmark-black.svg");
+}
+
+.card:hover .card__button {
+  bottom: 27px;
+
+  @media #{$tablet-width} {
+    bottom: 0;
+
+    padding-bottom: 17px;
   }
 }
 
@@ -80,10 +81,6 @@
 
 
   color: rgba(20, 21, 23, 0.7);
-
-  &--letter-spacing > h3 {
-    letter-spacing: -1.27px;
-  }
 
   @media #{$tablet-width} {
     flex-direction: column;
@@ -111,10 +108,6 @@
 
   @media #{$tablet-width} {
     margin-right: 10px;
-
-    &--smaller-margin {
-      margin-right: 0;
-    }
   }
 }
 
@@ -149,7 +142,7 @@
   position: absolute;
   bottom: 29px;
 
-  width: 84.3%;
+  width: 310px;
 
   border: 0;
 

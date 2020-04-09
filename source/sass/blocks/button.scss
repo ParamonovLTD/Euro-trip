@@ -13,6 +13,10 @@
 
   background-color: $main-accent;
 
+  &:hover {
+    background-color: $hover-accent;
+  }
+
   @media #{$tablet-width} {
     left: 50%;
     width: 250px;
@@ -22,15 +26,16 @@
     @include font(500, 10px, 12px, $font-montserrat);
     letter-spacing: 2px;
 
-    transform: translate(-50%);
+    transform: translateX(-50%);
+
+    &:active {
+      background-color: $hover-accent;
+    }
   }
 
   @media #{$mobile-width} {
-    // left: 50%;
     width: 288px;
     padding-top: 20px;
     padding-bottom: 18px;
-
-    // transform: translateX(-50%);
   }
 }

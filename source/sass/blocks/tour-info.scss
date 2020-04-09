@@ -15,8 +15,6 @@
 }
 
 .tour-info__text-wrapper {
-  // flex-grow: 1;
-  // width: 40.18%;
   padding-top: 10px;
 
   @media #{$tablet-width} {
@@ -25,6 +23,7 @@
   }
 
   @media #{$mobile-width} {
+    padding-top: 8px;
     padding-bottom: 49px;
   }
 }
@@ -59,7 +58,6 @@
   max-width: 370px;
   margin-bottom: 48px;
 
-  @include font(400, 16px, 28px, $font-montserrat);
   letter-spacing: -0.47px;
   color: rgba(44, 46, 63, 0.7);
 
@@ -73,10 +71,10 @@
 
 .tour-info__button {
   width: 250px;
-  // padding-right: 38px;
-  // padding-left: 40px;
 
   border: 0;
+
+  cursor: pointer;
 
   @media #{$mobile-width} {
     width: 288px;

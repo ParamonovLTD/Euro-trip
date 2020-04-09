@@ -3,6 +3,8 @@
 @import "general/variables.scss";
 @import "general/mixins.scss";
 @import "general/global.scss";
+@import "blocks/body.scss";
+@import "blocks/main.scss";
 @import "blocks/button.scss";
 @import "blocks/header.scss";
 @import "blocks/introduction.scss";
@@ -21,3 +23,6 @@
 @import "blocks/features.scss";
 @import "blocks/feedback.scss";
 @import "blocks/form.scss";
+@import "blocks/popup.scss";
+@import "blocks/purchase.scss";
+@import "blocks/success.scss";

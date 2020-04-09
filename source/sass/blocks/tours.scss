@@ -7,8 +7,8 @@
   padding-right: 65px;
 
   @media #{$tablet-width} {
-    padding-right: 81px;
-    padding-left: 82px;
+    padding-right: 82px;
+    padding-left: 80px;
   }
 
   @media #{$mobile-width} {
@@ -23,15 +23,23 @@
 
   display: flex;
   max-height: 430px;
-  transition-duration: 0.3s;
+
+  overflow: hidden;
+
+  transition: 0.3s;
 
   &:hover {
     background-color: rgba(20, 21, 23, 0.6);
   }
+}
 
-  &:hover .tours__link {
-    display: block;
-  }
+.tours__card-inner:hover .tours__link {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tours__card-inner:hover img {
+  transform: scale(1.02);
 }
 
 .tours__card {
@@ -39,8 +47,8 @@
 
   display: flex;
 
-  // Для первых трех отступ снизу
-  &:not(:nth-of-type(n + 4)) {
+  // Для всех кроме последних трех отступ снизу
+  &:not(:nth-last-of-type(-n + 3)) {
     margin-bottom: 101px;
   }
 
@@ -58,7 +66,11 @@
   }
 
   // Если в ряду оказалось 3 карточки, то убирает у первой занимание свободного места
-  &:nth-last-of-type(3n) {
+  // Если в ряду одна карточка, у первой карточки предыдущей строки убирает занимание свободного места
+  // Если в ряду две карточки, у первой карточки предыдущей строки убирает занимание свободного места
+  &:nth-last-of-type(3n),
+  &:nth-last-of-type(3n+4),
+  &:nth-last-of-type(3n+5) {
     flex-grow: 0;
   }
 
@@ -69,7 +81,7 @@
 
   @media #{$tablet-width} {
     // Первым трем изменяет отступ
-    &:nth-of-type(-n + 3) {
+    &:nth-last-of-type(n + 3) {
       margin-bottom: 15px;
     }
 
@@ -83,6 +95,11 @@
     &:nth-of-type(3n + 2):last-of-type {
       max-width: none;
       justify-content: center;
+    }
+
+    // Отменяет стили для десктопа
+    &:nth-of-type(3n + 4) {
+      flex-grow: 0;
     }
   }
 
@@ -102,9 +119,20 @@
       margin-bottom: 30px;
     }
 
-    // У всех, кроме первых 4, убирает ранее введенный отступ
-    &:nth-of-type(n + 5) {
+    // У всех, кроме первых 3, убирает ранее введенный отступ
+    &:nth-of-type(n + 4) {
       margin-top: 0;
+    }
+
+    // возращает убранные на таблете стили
+    &:nth-of-type(3n + 4),
+    &:nth-of-type(3n + 2):last-of-type {
+      flex-grow: 1;
+    }
+
+    // Чтобы все выравнивались по центру
+    &:nth-last-of-type(3n + 4) {
+      flex-grow: 1;
     }
   }
 }
@@ -113,21 +141,27 @@
   position: relative;
   z-index: -1;
 
+  transition: 0.3s;
+
   @media #{$tablet-width} {
     @include size(288px, 425px);
   }
 }
 
 .tours__link {
-  display: none;
   position: absolute;
   top: 155px;
   left: 50%;
-  transform: translateX(-50%);
 
   width: 266px;
   padding-top: 31px;
   padding-bottom: 29px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
 
   @include font(500, 14px, 17px, $font-montserrat);
   text-align: center;
@@ -140,8 +174,8 @@
 
 .tours__card-inner > p {
   position: absolute;
-  bottom: 0;
   right: 50%;
+  bottom: 0;
 
   @include clear-block;
   width: 215px;
